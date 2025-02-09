@@ -1,0 +1,88 @@
+/* Reset defaults for body and html */  
+body, html {  
+    height: 100%;  
+    margin: 0;  
+    display: flex;  
+    justify-content: center;   
+    align-items: center;  
+    background-image: url('background.png');  
+    background-size: cover;   
+    background-position: center top;   
+    font-family: 'Arial', sans-serif;   
+}  
+
+/* Overlay for semi-transparent background */  
+.overlay {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    height: 100%;  
+    width: 100%;  
+    background-color: rgba(2, 6, 35, 0.5);  
+    z-index: 1;  
+}  
+
+/* Main content container */  
+.loading-container {  
+    text-align: center;  
+    color: white;   
+    background: #020623;  
+    padding: 40px 30px;  
+    border-radius: 10px;   
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);   
+    z-index: 2;  
+    width: 400px;  
+    min-height: 300px;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+}  
+
+/* Status message styling */  
+#status-message {  
+    font-size: 1.2rem;  
+    line-height: 1.4;  
+    text-align: center;  
+    color: white;  
+    margin-bottom: 15px;  
+}  
+
+/* Link container */  
+#link-container {
+    margin-top: 20px;
+}
+
+/* Disabled link styling */  
+.disabled-link {  
+    color: #ffffff;
+    background-color: #4a4a4a;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: not-allowed;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    display: inline-block;
+}  
+
+/* Active link styling */  
+.active-link {  
+    color: white !important;  
+    background-color: #7C1C93;  
+    padding: 12px 24px;  
+    border-radius: 25px;  
+    text-decoration: none;  
+    font-size: 1.1rem;  
+    cursor: pointer;  
+    opacity: 1;  
+    box-shadow: 0 4px 15px rgba(124, 28, 147, 0.4);  
+    transform: scale(1);  
+}  
+
+.active-link:hover {  
+    background-color: #9a4cad;  
+    transform: scale(1.05);  
+    box-shadow: 0 6px 20px rgba(124, 28, 147, 0.5);  
+}
