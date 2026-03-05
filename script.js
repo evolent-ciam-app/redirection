@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const loginLink = document.getElementById('login-link');
+  const redirectUrl =
+    "https://jira.supportcenter.evolent.com/servicedesk/customer/portals";
 
-    // Enable link after 5 minutes (300,000 milliseconds)
-    setTimeout(() => {
-        loginLink.href = "https://jira.evolent.com/servicedesk/customer/portal/25/user/login?nokerberos&destination=portal%2F25";
-        loginLink.classList.remove('disabled-link');
-        loginLink.classList.add('active-link');
-        loginLink.textContent = 'Click here to access Jira';
-    }, 300000);
+  // 10-second delay so users can comfortably read the message
+  setTimeout(() => {
+    window.location.replace(redirectUrl);
+  }, 6000); // 6,000 ms = 6 seconds
 });
