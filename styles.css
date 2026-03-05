@@ -1,88 +1,71 @@
-/* Reset defaults for body and html */  
-body, html {  
-    height: 100%;  
-    margin: 0;  
-    display: flex;  
-    justify-content: center;   
-    align-items: center;  
-    background-image: url('background.png');  
-    background-size: cover;   
-    background-position: center top;   
-    font-family: 'Arial', sans-serif;   
-}  
+/* Reset defaults */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-/* Overlay for semi-transparent background */  
-.overlay {  
-    position: absolute;  
-    top: 0;  
-    left: 0;  
-    height: 100%;  
-    width: 100%;  
-    background-color: rgba(2, 6, 35, 0.5);  
-    z-index: 1;  
-}  
+  /* ✅ Correct background file */
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center top;
 
-/* Main content container */  
-.loading-container {  
-    text-align: center;  
-    color: white;   
-    background: #020623;  
-    padding: 40px 30px;  
-    border-radius: 10px;   
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);   
-    z-index: 2;  
-    width: 400px;  
-    min-height: 300px;  
-    display: flex;  
-    flex-direction: column;  
-    justify-content: center;  
-    align-items: center;  
-}  
-
-/* Status message styling */  
-#status-message {  
-    font-size: 1.2rem;  
-    line-height: 1.4;  
-    text-align: center;  
-    color: white;  
-    margin-bottom: 15px;  
-}  
-
-/* Link container */  
-#link-container {
-    margin-top: 20px;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Disabled link styling */  
-.disabled-link {  
-    color: #ffffff;
-    background-color: #4a4a4a;
-    padding: 12px 24px;
-    border-radius: 25px;
-    cursor: not-allowed;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    opacity: 0.7;
-    display: inline-block;
-}  
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(2, 6, 35, 0.5);
+  z-index: 1;
+}
 
-/* Active link styling */  
-.active-link {  
-    color: white !important;  
-    background-color: #7C1C93;  
-    padding: 12px 24px;  
-    border-radius: 25px;  
-    text-decoration: none;  
-    font-size: 1.1rem;  
-    cursor: pointer;  
-    opacity: 1;  
-    box-shadow: 0 4px 15px rgba(124, 28, 147, 0.4);  
-    transform: scale(1);  
-}  
+/* Main container */
+.loading-container {
+  z-index: 2;
+  background: #020623;
+  padding: 40px 32px;
+  border-radius: 10px;
+  width: 520px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
 
-.active-link:hover {  
-    background-color: #9a4cad;  
-    transform: scale(1.05);  
-    box-shadow: 0 6px 20px rgba(124, 28, 147, 0.5);  
+/* Main message */
+#status-message {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Paragraph spacing */
+#status-message p {
+  margin: 0 0 14px 0;
+}
+
+/* Secondary text */
+#status-message .secondary-text {
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+/* Button */
+.active-link {
+  display: inline-block;
+  padding: 12px 26px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background-color: #7C1C93;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(124, 28, 147, 0.4);
+  transition: all 0.25s ease;
+}
+
+.active-link:hover {
+  background-color: #9a4cad;
+  transform: scale(1.05);
 }
